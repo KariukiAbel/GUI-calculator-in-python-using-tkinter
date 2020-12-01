@@ -14,6 +14,17 @@ def get_variables(num):
 
 def clear_all():
     display.delete(0,END)
+    
+    
+def undo():
+    entire_string = display.get()
+    if len(entire_string):
+        new_string = entire_string[:-1]
+        clear_all()
+        display.insert(0,new_string)
+    else:
+        clear_all()
+        display.insert(0, "Error")
 
 # adding the input field
 display = Entry(root)
@@ -48,7 +59,7 @@ Button(root, text="%").grid(row=3, column=4)
 Button(root, text="(").grid(row=4, column=4)
 Button(root, text="exp").grid(row=5, column=4)
 
-Button(root, text="<-").grid(row=2, column=5)
+Button(root, text="<-", command = lambda :undo()).grid(row=2, column=5)
 Button(root, text="x!").grid(row=3, column=5)
 Button(root, text=")").grid(row=4, column=5)
 Button(root, text="^2").grid(row=5, column=5)
