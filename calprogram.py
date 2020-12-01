@@ -31,4 +31,15 @@ Button(root, text="-").grid(row=3, column=3)
 Button(root, text="*").grid(row=4, column=3)
 Button(root, text="/").grid(row=5, column=3)
 
+#adding new operations
+Button(root, text="pi").grid(row=2, column=4)
+Button(root, text="%").grid(row=3, column=4)
+Button(root, text="(").grid(row=4, column=4)
+Button(root, text="exp").grid(row=5, column=4)
+
+Button(root, text="<-").grid(row=2, column=5)
+Button(root, text="x!").grid(row=3, column=5)
+Button(root, text=")").grid(row=4, column=5)
+Button(root, text="^2").grid(row=5, column=5)
+
 root.mainloop()
